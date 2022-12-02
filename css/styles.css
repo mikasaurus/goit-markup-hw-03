@@ -57,7 +57,7 @@ body {
   color: var(--dark-grey);
   letter-spacing: 0.02em;
   text-decoration: none;
-  margin-right: 46px;
+  padding-right: 46px;
 }
 
 /*nie działa a:active z przyczyn zupełnie dla mnie nieznanych :D */
@@ -75,7 +75,7 @@ body {
   color: var(--light-grey);
   letter-spacing: 0.02em;
   text-decoration: none;
-  margin-right: 50px;
+  padding-right: 50px;
 }
 
 .contact-links a:hover,
@@ -220,6 +220,8 @@ body {
 
 .footer {
   background-color: var(--gunmetal);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .logo-footer,
