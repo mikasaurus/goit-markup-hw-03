@@ -19,7 +19,7 @@ body {
   padding: 0;
 }
 
-.list {
+.list-flex {
   list-style-type: none;
   display: flex;
 }
@@ -29,8 +29,14 @@ body {
 .nav-container {
   display: flex;
   justify-content: space-between;
-  padding: 26px 27px 25px 15px;
-  align-items: baseline;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  align-items: center;
+}
+
+.inner-nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo,
@@ -43,6 +49,7 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
+  margin-right: 93px;
 }
 
 .logo-blue {
@@ -57,7 +64,9 @@ body {
   color: var(--dark-grey);
   letter-spacing: 0.02em;
   text-decoration: none;
+  display: flex;
   padding-right: 46px;
+  padding-left: 12px;
 }
 
 /*nie działa a:active z przyczyn zupełnie dla mnie nieznanych :D */
@@ -75,7 +84,7 @@ body {
   color: var(--light-grey);
   letter-spacing: 0.02em;
   text-decoration: none;
-  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .contact-links a:hover,
@@ -90,7 +99,7 @@ body {
 
 /* Agencja */
 
-.banner {
+.hero {
   background-color: var(--gunmetal);
   text-align: center;
 }
@@ -104,7 +113,7 @@ body {
   text-align: center;
   vertical-align: top;
   letter-spacing: 0.06em;
-  padding: 200px 252px 30px 252px;
+  padding: 200px 237px 0px 237px;
 }
 
 .order-button {
@@ -118,13 +127,14 @@ body {
   letter-spacing: 0.06em;
   border-radius: 4px;
   cursor: pointer;
-  padding: 10px 41px;
-  margin: 30px 500px 200px 500px;
+  padding: 10px 40px;
+  margin: 30px 475px 200px 475px;
   white-space: nowrap;
 }
 
 .main-info {
-  padding: 94px 15px 94px 15px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .main-info-header {
@@ -161,8 +171,12 @@ body {
   text-align: center;
   vertical-align: top;
   letter-spacing: 0.03em;
-  padding: 94px 424px 50px 424px;
+  padding: 0px 424px 50px 424px;
   white-space: nowrap;
+}
+
+.mission-frame {
+  padding: 15px;
 }
 
 .team {
@@ -220,8 +234,7 @@ body {
 
 .footer {
   background-color: var(--gunmetal);
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 60px 0px;
 }
 
 .logo-footer,
@@ -234,7 +247,7 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
-  padding: 60px 0px 20px 0px;
+  padding-bottom: 20px;
 }
 
 .address {
@@ -243,7 +256,7 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  padding: 20px 0px 60px 0px;
+  padding-top: 10px;
 }
 
 .address a:link {
@@ -326,9 +339,11 @@ body {
 
 /* Flex stuff */
 
-.wrapper {
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .mission-flex {
