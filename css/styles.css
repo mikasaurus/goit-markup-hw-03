@@ -11,11 +11,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-*,
-::before,
-::after {
+* {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
@@ -24,24 +22,29 @@ body {
   display: flex;
 }
 
+.section {
+  padding-bottom: 94px;
+}
+
 /* Nav section */
+
+.header {
+  padding: 25px 0;
+}
 
 .nav-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 25px;
-  padding-bottom: 25px;
   align-items: center;
 }
 
-.inner-nav {
-  display: flex;
-  align-items: center;
+.nav-left {
+  gap: 0 93px;
 }
 
-.logo,
-.logo a:link,
-.logo a:visited {
+.logo-link,
+.logo-link:link,
+.logo-link:visited {
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -49,7 +52,6 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
-  margin-right: 93px;
 }
 
 .logo-blue {
@@ -64,9 +66,6 @@ body {
   color: var(--dark-grey);
   letter-spacing: 0.02em;
   text-decoration: none;
-  display: flex;
-  padding-right: 46px;
-  padding-left: 12px;
 }
 
 /*nie działa a:active z przyczyn zupełnie dla mnie nieznanych :D */
@@ -76,21 +75,28 @@ body {
   color: var(--blue);
 }
 
-.contact-links a:link,
-.contact-links a:visited {
+.nav-items {
+  gap: 0 46px;
+}
+
+.contact-link:link,
+.contact-link:visited {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
   color: var(--light-grey);
   letter-spacing: 0.02em;
   text-decoration: none;
-  padding-left: 50px;
 }
 
-.contact-links a:hover,
-.contact-links a:active,
-.contact-links a:focus {
+.contact-link:hover,
+.contact-link:active,
+.contact-link:focus {
   color: var(--blue);
+}
+
+.contact-items {
+  gap: 0 50px;
 }
 
 .header-underline {
@@ -101,6 +107,10 @@ body {
 
 .hero {
   background-color: var(--gunmetal);
+  text-align: center;
+  padding: 200px 0;
+  margin: 0 auto;
+  display: flex;
   text-align: center;
 }
 
@@ -113,7 +123,8 @@ body {
   text-align: center;
   vertical-align: top;
   letter-spacing: 0.06em;
-  padding: 200px 237px 0px 237px;
+  margin-bottom: 30px;
+  max-width: 696px;
 }
 
 .order-button {
@@ -128,13 +139,11 @@ body {
   border-radius: 4px;
   cursor: pointer;
   padding: 10px 40px;
-  margin: 30px 475px 200px 475px;
   white-space: nowrap;
 }
 
 .main-info {
   padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .main-info-header {
@@ -159,8 +168,9 @@ body {
   text-align: left;
 }
 
-.mission {
-  padding-bottom: 94px;
+.mission-flex {
+  display: flex;
+  justify-content: center;
 }
 
 .mission-header {
@@ -176,16 +186,17 @@ body {
 }
 
 .mission-frame {
-  padding: 15px;
+  margin: 15px;
 }
 
 .team {
   background-color: var(--complementary);
-  padding-bottom: 94px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.team-frame {
-  gap: 30px;
+.team-box {
+  justify-content: space-evenly;
 }
 
 .team-header {
@@ -228,6 +239,8 @@ body {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  align-items: center;
 }
 
 /* Footer */
@@ -270,6 +283,11 @@ body {
 
 /* Portfolio */
 
+.portfolio-box {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .portfolio-buttons {
   display: flex;
   margin: 100px auto 50px auto;
@@ -306,7 +324,6 @@ body {
 
 .portfolio {
   display: flex;
-  padding-bottom: 94px;
 }
 
 .portfolio-header {
@@ -346,16 +363,6 @@ body {
   padding-right: 15px;
 }
 
-.mission-flex {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
 .flex {
   display: flex;
-}
-
-.portfolio-box {
-  flex-wrap: wrap;
 }
